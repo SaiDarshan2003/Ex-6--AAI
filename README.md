@@ -21,15 +21,12 @@ Step 5:Iterate through each word in the tokenized text.<br>
 
 
 ## PROGRAM
-```python
+```
 import nltk
 from nltk.corpus import wordnet
-
 nltk.download('averaged_perceptron_tagger')
 nltk.download('wordnet')
 nltk.download('punkt')
-
-# Function to identify verbs in a sentence
 def get_verbs(sentence):
     verbs = []
     pos_tags = nltk.pos_tag(nltk.word_tokenize(sentence))
@@ -37,44 +34,33 @@ def get_verbs(sentence):
         if tag.startswith('V'):  # Verbs start with 'V' in the POS tag
             verbs.append(word)
     return verbs
-
-
 def get_synonyms(word):
     synonyms = []
     for syn in wordnet.synsets(word):
         for lemma in syn.lemmas():
             synonyms.append(lemma.name())
     return synonyms
-
-
 def read_text_file(file_path):
     with open(file_path, 'r') as file:
         text = file.read()
     return text
-
-
 def main():
     file_path = 'sample.txt'
-
     text = read_text_file(file_path)
     sentences = nltk.sent_tokenize(text)
-
     all_verbs = []
     synonyms_dict = {}
-
     for sentence in sentences:
         verbs = get_verbs(sentence)
         all_verbs.extend(verbs)
         for verb in verbs:
             synonyms = get_synonyms(verb)
             synonyms_dict[verb] = synonyms
-
     with open('output.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(['Verb', 'Synonyms'])
         for verb, synonyms in synonyms_dict.items():
             writer.writerow([verb, ', '.join(synonyms)])
-
 
 if __name__ == '__main__':
     main()
@@ -115,13 +101,7 @@ if __name__ == '__main__':
 |defeated|defeated, discomfited, get\_the\_better\_of, overcome, defeat, kill, shoot\_down, defeat, vote\_down, vote\_out, defeated, defeated, disappointed, discomfited, foiled, frustrated, thwarted|
 |saving|economy, saving, rescue, deliverance, delivery, saving, preservation, saving, salvage, salve, relieve, save, save, preserve, save, carry\_through, pull\_through, bring\_through, save, save, lay\_aside, save\_up, save, make\_unnecessary, deliver, redeem, save, spare, save, save, economize, economise, keep\_open, hold\_open, keep, save, write, save, redemptive, redeeming, saving, saving|
 |threw|throw, throw, shed, cast, cast\_off, shake\_off, throw, throw\_off, throw\_away, drop, throw, thrust, give, throw, throw, flip, switch, project, cast, contrive, throw, throw, bewilder, bemuse, discombobulate, throw, hurl, throw, hold, throw, have, make, give, throw, throw, throw, confuse, throw, fox, befuddle, fuddle, bedevil, confound, discombobulate|
-|return|tax\_return, income\_tax\_return, return, return, homecoming, return, coming\_back, restitution, return, restoration, regaining, return, return, issue, take, takings, proceeds, yield, payoff, recurrence, return, rejoinder, retort, return, riposte, replication, comeback, counter, return\_key, return, return, paying\_back, getting\_even, return, return, reappearance, return, return, render, return, revert, return, retrovert, regress, turn\_back, hark\_back, return, come\_back, recall, return, take\_back, bring\_back, return, return, retort, come\_back, repay, return, riposte, rejoin, come\_back, return, refund, return, repay, give\_back, render, deliver, return, reelect, return, fall, return, pass, devolve, return, render, yield, return, give, generate, return|
-|said|state, say, tell, allege, aver, say, suppose, say, read, say, order, tell, enjoin, say, pronounce, articulate, enounce, sound\_out, enunciate, say, say, say, say, say, say, aforesaid, aforementioned, said|
-|climbed|climb, climb\_up, mount, go\_up, climb, wax, mount, climb, rise, climb, climb, rise, go\_up, climb|
-|reached|reach, make, attain, hit, arrive\_at, gain, reach, hit, attain, reach, reach\_out, reach, get\_through, get\_hold\_of, contact, achieve, accomplish, attain, reach, reach, extend\_to, touch, reach, make, get\_to, progress\_to, pass, hand, reach, pass\_on, turn\_over, give, strive, reach, strain|
-|glad|gladiolus, gladiola, glad, sword\_lily, glad, glad, happy, glad, beaming, glad|
-|be|beryllium, Be, glucinium, atomic\_number\_4, be, be, be, exist, be, be, equal, be, constitute, represent, make\_up, comprise, be, be, follow, embody, be, personify, be, be, live, be, cost, be|
-|knew|know, cognize, cognise, know, know, know, know, experience, live, acknowledge, recognize, recognise, know, know, sleep\_together, roll\_in\_the\_hay, love, make\_out, make\_love, sleep\_with, get\_laid, have\_sex, know, do\_it, be\_intimate, have\_intercourse, have\_it\_away, have\_it\_off, screw, fuck, jazz, eff, hump, lie\_with, bed, have\_a\_go\_at\_it, bang, get\_it\_on, bonk, know, know, know|
+
 |forget|forget, bury, forget, block, blank\_out, draw\_a\_blank, forget, forget, leave|
 |are|are, ar, be, be, be, exist, be, be, equal, be, constitute, represent, make\_up, comprise, be, be, follow, embody, be, personify, be, be, live, be, cost, be|
 |used|use, utilize, utilise, apply, employ, use, habituate, use, expend, use, practice, apply, use, use, used, exploited, ill-used, put-upon, used, victimized, victimised, secondhand, used|
