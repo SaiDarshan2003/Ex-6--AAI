@@ -102,12 +102,5 @@ if __name__ == '__main__':
 |saving|economy, saving, rescue, deliverance, delivery, saving, preservation, saving, salvage, salve, relieve, save, save, preserve, save, carry\_through, pull\_through, bring\_through, save, save, lay\_aside, save\_up, save, make\_unnecessary, deliver, redeem, save, spare, save, save, economize, economise, keep\_open, hold\_open, keep, save, write, save, redemptive, redeeming, saving, saving|
 |threw|throw, throw, shed, cast, cast\_off, shake\_off, throw, throw\_off, throw\_away, drop, throw, thrust, give, throw, throw, flip, switch, project, cast, contrive, throw, throw, bewilder, bemuse, discombobulate, throw, hurl, throw, hold, throw, have, make, give, throw, throw, throw, confuse, throw, fox, befuddle, fuddle, bedevil, confound, discombobulate|
 
-|forget|forget, bury, forget, block, blank\_out, draw\_a\_blank, forget, forget, leave|
-|are|are, ar, be, be, be, exist, be, be, equal, be, constitute, represent, make\_up, comprise, be, be, follow, embody, be, personify, be, be, live, be, cost, be|
-|used|use, utilize, utilise, apply, employ, use, habituate, use, expend, use, practice, apply, use, use, used, exploited, ill-used, put-upon, used, victimized, victimised, secondhand, used|
-|explored|research, search, explore, explore, explore, explore|
-|tell|Tell, William\_Tell, state, say, tell, tell, tell, narrate, recount, recite, order, tell, enjoin, say, tell, assure, tell, tell, evidence, distinguish, separate, differentiate, secern, secernate, severalize, severalise, tell, tell\_apart|
-|create|make, create, create, create, create, create, make, produce, make, create|
-|show|show, display, show, show, appearance, show, show, demo, exhibit, present, demonstrate, prove, demonstrate, establish, show, shew, testify, bear\_witness, prove, evidence, show, show, picture, depict, render, show, express, show, evince, indicate, point, designate, show, show, show\_up, read, register, show, record, show, usher, show, show|
 ## RESULT
 Thus, we have successfully implemented a program for Natural Language Processing.
