@@ -2,11 +2,11 @@
 <H3>REGISTER NO : 212221240047</H3>
 <H3>EX. NO.6</H3>
 <H3>DATE:</H3>
-<H1 ALIGN =CENTER>Implementation of Semantic Analysis</H1>
-<H3>Aim: 
+<H2 ALIGN =CENTER>Implementation of Semantic Analysis</H2>
+<H3>Aim: </H3>
+
+ To perform Parts of speech identification and Synonym using Natural Language Processing (NLP) techniques. 
  
- To perform Parts of speech identification and Synonym using Natural Language Processing (NLP) techniques. </H3> 
- <BR>
 <h3>Algorithm:</h3>
 Step 1: Import the nltk library.<br>
 Step 2: Download the 'punkt', 'wordnet', and 'averaged_perceptron_tagger' resources.<br>
@@ -21,6 +21,7 @@ Step 5:Iterate through each word in the tokenized text.<br>
 
 
 ## PROGRAM
+
 ```
 import nltk
 from nltk.corpus import wordnet
